@@ -1,5 +1,5 @@
 
-const logo = '/Logo.svg'
+const logo = './dist/illustrations/Logo.svg'
 
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';

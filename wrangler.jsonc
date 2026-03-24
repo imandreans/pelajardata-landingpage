@@ -6,7 +6,7 @@
     "enabled": true
   },
   "assets": {
-    "directory": "frontend/public"
+    "directory": "frontend/dist"
   },
   "compatibility_flags": [
     "nodejs_compat"
@@ -15,4 +15,5 @@
     "command": "npm install && npm run build",
     "cwd": "./frontend"
   }
+  
 }

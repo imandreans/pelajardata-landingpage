@@ -3,44 +3,44 @@ import Footer from '../footer';
 import { Button, } from "@/components/ui/button"
 const eventTypes = [
   {
-    image: "./public/illustrations/undraw_conversation_15p8.svg",
+    image: "./dist/illustrations/undraw_conversation_15p8.svg",
     title: 'offline events',
     description: 'In-person workshops and meetups for hands-on learning and networking.',
   },
   {
-    image: "./public/illustrations/undraw_remote-meeting_kqj0.svg",
+    image: "./dist/illustrations/undraw_remote-meeting_kqj0.svg",
     title: 'online events',
     description: 'Virtual sessions accessible from anywhere, featuring expert talks and Q&As.',
   },
   {
-    image: "./public/illustrations/undraw_teamwork_zplp.svg",
+    image: "./dist/illustrations/undraw_teamwork_zplp.svg",
     title: 'Workshops',
     description: 'Intensive practical sessions focused on specific tools and techniques.',
   },
   {
-    image: "./public/illustrations/undraw_programming_j1zw.svg",
+    image: "./dist/illustrations/undraw_programming_j1zw.svg",
     title: 'Competitions',
     description: 'Challenge yourself with real-world problems and showcase your skills.',
   }
 ];
 const learningPaths = [
   {
-    image: "./public/illustrations/undraw_data-trends_kv5v.svg",
+    image: "./dist/illustrations/undraw_data-trends_kv5v.svg",
     title: 'data analytics',
     description: 'Master data visualization, statistical analysis, and business intelligence tools.',
   },
   {
-    image: "./public/illustrations/undraw_data-analysis_b7cp.svg",
+    image: "./dist/illustrations/undraw_data-analysis_b7cp.svg",
     title: 'data science',
     description: 'Dive deep into machine learning, statistical modeling, and predictive analytics.',
   },
   {
-    image: "./public/illustrations/undraw_data-processing_ohfw.svg",
+    image: "./dist/illustrations/undraw_data-processing_ohfw.svg",
     title: 'Data Engineering',
     description: 'Build robust data pipelines, design databases, and manage data infrastructure.',
   },
   {
-    image: "./public/illustrations/undraw_robotics_0czc.svg",
+    image: "./dist/illustrations/undraw_robotics_0czc.svg",
     title: 'artificial intelligence',
     description: 'Explore neural networks, deep learning, and artificial intelligence applications.',
   }
@@ -48,19 +48,19 @@ const learningPaths = [
 
 const events = [
   {
-  image: "./public/dumpevent-online3.png",  
+  image: "./dist/dumpevent-online3.png",  
   title: "Hack for Running AI in Distributed Ecosystem",
   date: "2 Februari 2025",
   price: "Free",
   type: "Online Events",},
     {
-      image: "./public/event-online1.png",
+      image: "./dist/event-online1.png",
       title: "Ngobrol Virtual Pelajar Data",
     date: "7 Februari 2025",
     price: "Free",
     type: "Online Events",},
     {
-    image: "./public/dumpevent-online2.png",
+    image: "./dist/dumpevent-online2.png",
     title: "Menulis CV dengan Metode Star",
     date: "22 Februari 2025",
     price: "Free",

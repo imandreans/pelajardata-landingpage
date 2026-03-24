@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "wrangler": "^4.76.0"
+  },
+  "scripts": {
+    "deploy": "tsc -b && vite build && wrangler deploy",
+    "preview": "tsc -b && vite build && wrangler dev"
+  }
+}

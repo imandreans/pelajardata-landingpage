@@ -1,5 +1,4 @@
 import './App.css'
-import './styles/events.css'
 import Navbar from './components/navbar.tsx';
 import Intro from './components/intro.tsx';
 import Mission from './components/mission.tsx';

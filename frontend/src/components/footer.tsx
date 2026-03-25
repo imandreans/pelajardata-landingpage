@@ -2,7 +2,7 @@ import XIcon from '@mui/icons-material/X';
 import EmailIcon from '@mui/icons-material/Email';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-const logo = '/Logo.svg'
+const logo = '/illustrations/Logo.svg'
 
 function footer(){
     return <footer>

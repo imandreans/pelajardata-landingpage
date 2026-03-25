@@ -29,7 +29,6 @@ function CollaboratePage() {
     
     <main id="collaborate-page">
         
-      <section>
         <h1>Discover The Collaboration Opportunities</h1>
         <div className="collaborate-cards">
           {collaborationTypes.map((type) => (
@@ -40,14 +39,11 @@ function CollaboratePage() {
               />
               <h2>{type.title}</h2>
               <p>{type.description}</p>
-              {/* <ul>
-                {type.examples.map((ex) => <li key={ex}>{ex}</li>)}
-              </ul> */}
+
             </div>
           ))}
         </div>
         <a href="mailto:pelajardataid@gmail.com" className="contact-button">Contact Us</a>
-      </section>
     </main>
     <Footer />
   </>

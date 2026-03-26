@@ -26,7 +26,7 @@ function activities() {
     for (let index = 1; index <= 4; index++) {
         images.push(
             <div className="online-card" key={`activity-${index}`}>
-                <img src={`/event-online${index}.png`} alt="activity" style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
+                <img src={`./src/assets/images/event-online${index}.png`} alt="activity" style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
             </div>
         )
     }
@@ -35,7 +35,7 @@ function activities() {
     for (let index = 1; index <= 4; index++) {
         images2.push(
             <div className="activity-card" key={`meetup-${index}`}>
-                <img src={`/meetup-${index}.jpg`} alt="Meetup Pelajar Data" style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
+                <img src={`./src/assets/images/meetup-${index}.jpg`} alt="Meetup Pelajar Data" style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
             </div>
         )
     }

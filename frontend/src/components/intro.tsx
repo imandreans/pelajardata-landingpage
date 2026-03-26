@@ -11,7 +11,7 @@ return <div id="intro">
           </Button>
         </div>
         </section>
-        <img src='/illustrations/database.svg' alt="" />
+        <img src='./src/assets/vectors/database.svg' alt="" />
 </div>
 }
 export default intro;

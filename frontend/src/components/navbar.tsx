@@ -1,8 +1,8 @@
 
-const logo = './illustrations/Logo.svg'
+const logo = './src/assets/vectors/Logo.svg'
 
 import { useState } from "react";
-import { NavLink } from 'react-router-dom';
+  import { Link } from 'react-router-dom';
 
 function navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,10 +13,10 @@ function navbar() {
     </div>
     <div className="hamburger" id="hamburger" onClick={() => setMenuOpen(!menuOpen)}>&#9776;</div>
     <div className={"nav-center" + (menuOpen ? " open" : "") }>
-      <NavLink to="/">About Us</NavLink>
-      <NavLink to="/events">Events</NavLink>
-      <NavLink to="/collaborate">Let's Collab</NavLink>
-      <NavLink to="/blog">Blog</NavLink>
+      <Link to="/">About Us</Link>
+      <Link to="/events">Events</Link>
+      <Link to="/collaborate">Let's Collab</Link>
+      <Link to="/blog">Blog</Link>
     </div>
   </nav>;
 };

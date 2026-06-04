@@ -56,7 +56,7 @@ const BlogPage = () => {
                       {blog.author +
                         " | " +
                         format(
-                          new Date(blog.date_published).toLocaleDateString(),
+                          new Date(blog.create_at).toLocaleDateString(),
                           "dd MMM, yyyy"
                         )}
                     </span>

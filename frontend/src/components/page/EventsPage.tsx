@@ -48,19 +48,19 @@ const learningPaths = [
 
 const events = [
   {
-  image: "./src/assets/images/event-online5.jpg",  
+  image: "./src/assets/images/activity-4.jpg",  
   title: "Hack for Running AI in Distributed Ecosystem",
   date: "2 Februari 2025",
   price: "Free",
   type: "Online Events",},
     {
-      image: "./src/assets/images/event-online1.jpg",
+      image: "./src/assets/images/activity-5.jpg",
       title: "Ngobrol Virtual Pelajar Data",
     date: "7 Februari 2025",
     price: "Free",
     type: "Online Events",},
     {
-    image: "./src/assets/images/event-online6.jpg",
+    image: "./src/assets/images/activity-6.jpg",
     title: "Menulis CV dengan Metode Star",
     date: "22 Februari 2025",
     price: "Free",
@@ -73,7 +73,7 @@ function EventsPage() {
             <section className="hero-section">
                 <section className='hero-content'>
                     <h1>connecting with fellow enthusiasts and industry pioneers</h1>
-                    <Button variant={'default'}><a href='#upcoming-events'>Explore Events</a></Button>
+                    <Button size="lg"><a href='#upcoming-events'>Explore Events</a></Button>
                 </section>
             </section>
             <section className="event-types-section">
@@ -123,14 +123,14 @@ function EventsPage() {
                       </div>
                     ))}
                       </div>
-                    <Button >
+                    <Button size='lg'>
                     <a
                         href="https://lu.ma/pelajardata"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-button"
                         >
-Find More Events
+                        Find More Events
                     </a>
                       </Button>
             </section>

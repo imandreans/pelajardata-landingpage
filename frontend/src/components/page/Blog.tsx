@@ -12,7 +12,7 @@ import rehypeRaw from 'rehype-raw';
 
 interface BlogContent {
   author: string;
-  date_published: string;
+  create_at: string;
   content: string;
   title?: string;
 }
@@ -23,7 +23,7 @@ const Blog = () => {
 const {id} = useParams()
 const [content, setContent] = useState<BlogContent>({
   author: '',
-  date_published: '',
+  create_at: '',
   content: '',
 })
 const getData = async ()=>{
@@ -386,7 +386,7 @@ useEffect(()=>{
       </Button>
     <article className='flex flex-col row-start-1 col-start-2 col-span-2'>
     {/* <h1 className='text-[36px]/9 font-bold'>{content.title}</h1> */}
-    <span className='text-gray-500'>{content.author + " | " + new Date(content.date_published).toLocaleDateString('en-GB',{
+    <span className='text-gray-500'>{content.author + " | " + new Date(content.create_at).toLocaleDateString('en-GB',{
       year: 'numeric',
       month: 'long',
       day: 'numeric'

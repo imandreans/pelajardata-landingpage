@@ -1,16 +1,12 @@
 import express, { response } from 'express';
-import {Client} from "pg";
+// import {Client} from "pg";
+import sqlite3 from "sqlite3"
 import cors from "cors"
 //input few variables to access the database
-const conn = new Client({
-    host: "localhost",
-    port: "5432",
-    user: "postgres",
-    password: "12345",
-    database: "PelajarData"
-})
+
+const filename = "C:\\Users\\andre\\OneDrive\\Documents\\DB\\blog.db"
 //connect to database
-conn.connect()
+const conn = new sqlite3.Database(filename)
 const app = express()
 
 app.use(cors({
@@ -26,13 +22,17 @@ app.get('/', (req, res) => {
 // access data 
 app.get('/viewdata', (req, res) =>{
         //fetch the data
-    conn.query('SELECT * FROM public."Blog"', (err, result)=>{
-            if (err)
-                res.send(err)
-            else{
-                res.send(result.rows)
-            }
-        })
+
+    const sql = `SELECT * FROM Blog`;
+    conn.all(sql, (err, rows) => {
+        //if not failed
+        if (err){
+
+            return res.status(500).json({error: `Database Query Failed ${err.message}`}) 
+        } else {
+            return res.status(200).json(rows)
+        }
+    })
     })
 
 app.get('/blog/:id', (req, res)=>{
@@ -40,12 +40,16 @@ app.get('/blog/:id', (req, res)=>{
         //get the id
         const {id} = req.params
         //get the data
-        conn.query('SELECT * FROM public."Blog" WHERE id = $1', [id] , (err, result)=>{
+
+        const sql = `SELECT * FROM Blog WHERE id = ?`
+
+        conn.get(sql, [id] , (err, result)=>{
             //if not failed
             if (err) return res.status(500).json({error: "Database Query Failed"})
             else{
                 //if fail
-                return res.status(200).json(result.rows[0])
+                console.log("Query result:", result)
+                return res.status(200).json(result)
             }
         })
     }catch(error){

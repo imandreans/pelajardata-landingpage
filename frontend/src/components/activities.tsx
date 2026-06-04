@@ -26,7 +26,7 @@ function activities() {
     for (let index = 1; index <= 4; index++) {
         images.push(
             <div className="online-card" key={`activity-${index}`}>
-                <img src={`./src/assets/images/event-online${index}.png`} alt="activity" style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
+                <img src={`./src/assets/images/activity-${index}.jpg`} alt="activity" style={{ width: '100%', height: '600px', objectFit: 'cover' }} />
             </div>
         )
     }

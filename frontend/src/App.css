@@ -40,7 +40,7 @@ nav {
   height: 80px;
   width: 100%;
   padding: 0 var(--spacing-xl);
-  background-color: #f5f5f5;
+  background-color: white;
   box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.05);
 }
 
@@ -87,9 +87,6 @@ nav {
   transition: width 0.3s ease;
 }
 
-
-
-
 #logo {
   height: 32px;
   transition: transform 0.3s ease;
@@ -120,8 +117,8 @@ nav {
 #intro {
   box-sizing: border-box;
   min-height: calc(100vh - 80px);
-  background-color: #f5f5f5;
-  display: flex;
+background: white;
+display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-xl);
@@ -141,6 +138,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
 }
+
 
 #intro h1 {
   color: var(--blue-primer);
@@ -910,35 +908,46 @@ align-items: center;
 
 /* Hero Section */
 .hero-section {
-  position: relative;
   padding: 20px 32px;
+  position: relative;
   min-height: calc(100vh - 80px);
+  background: rgba(0, 0, 0, 0.3); /* Fallback color */
   background-image: url("./src/assets/images/hero-content.jpg");
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   .hero-content{
+    position: absolute;
+    top:  25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
   display: flex;
-  align-items: start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+
   gap: 20px;
-  position: absolute;
-  bottom: calc((100vh - 500px) / 2);
+
   h1 {
     text-transform: uppercase;
+    max-width: 900px;
     font-size: 1.5rem;
     font-weight: 800;
-    text-align: left;
+    text-align: center;
     color: white;
   }
 }
 }
 
 .event-types-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: white;
   padding: 20px 32px;
   background-color: #003e7e;
   min-height: 100vh;
-  overflow: visible;
   h1{
     font-size: 1.25rem;
     font-weight: bold;
@@ -948,27 +957,25 @@ align-items: center;
 
   .events-grid{
     min-height: calc(100vh - 200px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    justify-content: center;
     align-items: center;
+
   }
   .events-grid .events-card{
     min-width: 300px;
-    border-radius: 6px;
+    max-width: 360px;
+    border-radius: 4px;
     color: black;
     background-color: white;
     display: flex;
-    height: 100px;
-    gap: 40px;
-    padding: 10px;
-    align-items: center;
-    justify-content: space-between;
     img{
-      max-height: 60px;
+      height: 60px;
     }
     section{
-      width: 130px;
+      max-width: 100px;
       h3{
         text-transform: uppercase;
         font-weight: 600;
@@ -984,6 +991,11 @@ align-items: center;
 }
 
 .learning-paths-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column; 
   color: black;
   padding: 20px 32px;
   /* background-color: #003e7e; */
@@ -997,10 +1009,12 @@ align-items: center;
 
   .events-grid{
     min-height: calc(100vh - 200px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    justify-content: center;
     align-items: center;
+
   }
   .events-grid .events-card{
     border: 1px solid black;
@@ -1038,8 +1052,8 @@ align-items: center;
   color: white;
   flex-direction: column;
   background-color: #003e7e;
-  min-height: 100vh;
   padding: 20px 32px;
+  height:auto;
   h1 {
     font-size: 1.25rem;
     font-weight: bold;
@@ -1047,6 +1061,23 @@ align-items: center;
     text-transform: uppercase;
   }
 
+  Button {
+  color: var(--blue-primer);
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+Button:hover {
+  background: var(--accent-color);
+  color: white;
+}
 .upcoming-events
 {
  flex: 1; 
@@ -1092,11 +1123,6 @@ align-items: center;
 }
 }
 }
-
-Button{
-  background-color: white;
-  color: black;
-}
 }
 
 @media only screen and (min-width: 745px) {
@@ -1109,8 +1135,6 @@ Button{
   }
 
   Button{
-    min-width: 250px;
-    min-height: 60px;
     a{
       font-size: 1.2rem;
     }

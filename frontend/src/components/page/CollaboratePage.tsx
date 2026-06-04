@@ -7,19 +7,19 @@ const collaborationTypes = [
     title: 'For Brands',
     description: 'Partner with us for sponsored events, paid content, and unique brand activations that connect you with our engaged audience.',
     examples: ['Sponsored Event', 'Paid Content', 'Brand Activation'],
-    illustration: '/illustrations/Product presentation-rafiki.svg'
+    illustration: './src/assets/vectors/Brand.svg'
   },
   {
     title: 'For Communities',
     description: 'Let\'s join forces for webinars, offline gatherings, and knowledge-sharing sessions to empower and grow our communities together.',
     examples: ['Webinar Collaboration', 'Offline Gathering', 'Community Workshop'],
-    illustration: '/illustrations/Team spirit-pana.svg'
+    illustration: './src/assets/vectors/Community.svg'
   },
   {
     title: 'For Companies',
     description: 'Tap into our vibrant community to find top talent, co-host career events, or launch initiatives that bridge companies and passionate individuals.',
     examples: ['Talent Sourcing', 'Career Fair', 'Company-Community Initiative'],
-    illustration: '/illustrations/At the office-amico.svg'
+    illustration: './src/assets/vectors/Company.svg'
   }
 ];
 

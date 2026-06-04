@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { Button } from './ui/button';
 
 const CollaborateCTA = () => {
   return (
@@ -7,9 +8,11 @@ const CollaborateCTA = () => {
       <p style={{fontSize: '1.2rem', marginBottom: '32px', maxWidth: 600, marginLeft: 'auto', marginRight: 'auto'}}>
         Ready to make an impact together? Whether you&apos;re a brand, community, or company, we&apos;re excited to explore collaboration opportunities that drive value and growth for everyone involved.
       </p>
+    <Button size="lg">
       <NavLink to='/collaborate'>
         Explore Collaboration
       </NavLink>
+  </Button>
     </section>
   );
 };

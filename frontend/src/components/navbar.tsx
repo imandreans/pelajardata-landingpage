@@ -1,9 +1,5 @@
-
-const logo = './src/assets/vectors/Logo.svg'
-
-
 import { useState } from "react";
-  import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
